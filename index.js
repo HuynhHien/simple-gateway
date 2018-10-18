@@ -7,7 +7,7 @@ const server = express();
 const port = process.env.PORT || 3000;
 
 server.get('/register', (req, res) => {
-  console.log(`Requset: ${req.params.device}!`);  
+  console.log(`Requset: ${req.params}!`);  
   res.send("Thanks you !!!");
 });
 
