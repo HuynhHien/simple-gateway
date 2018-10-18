@@ -1,25 +1,13 @@
 
-const http = require('http');
 
-const regPort = 8080;
-var server = http.createServer(function (req, res) {
-
-  if (req.method === "GET") {
-    console.log(`Register request regId = ${res.body}!`);  
-    res.send('Thanks you !');
-  } else if (req.method === "POST") {
-  
-      var body = "";
-      req.on("data", function (chunk) {
-          body += chunk;
-      });
-
-      req.on("end", function(){
-          res.writeHead(200, { "Content-Type": "text/html" });
-          res.end(body);
-      });
-  }
-
-}).listen(regPort);
+const express = require('express');
 
 
+const server = express();
+const port = process.env.PORT || 3000;
+
+server.get('/register', (req, res) => {
+  console.log(`Example server listening on port ${req.params}!`);  
+});
+
+server.listen(port, () => console.log(`Example app listening on port ${port}!`))
