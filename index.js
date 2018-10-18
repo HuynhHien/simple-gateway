@@ -7,7 +7,8 @@ const server = express();
 const port = process.env.PORT || 3000;
 
 server.get('/register', (req, res) => {
-  console.log(`Example server listening on port ${req.params}!`);  
+  console.log(`Example server listening on port ${req.param}!`);  
+  res.send("Thanks you !!!");
 });
 
 server.listen(port, () => console.log(`Example app listening on port ${port}!`))
