@@ -1,0 +1,15 @@
+{
+  "name": "simple gate way",
+  "version": "0.0.1",
+  "description": "Develop by Hien.Huynh",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js --webhook",
+  },
+  "keywords": [
+  ],
+  "author": "Hien Huynh",
+  "license": "Apache-2.0",
+  "dependencies": {
+  }
+}
